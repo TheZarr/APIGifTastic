@@ -1,6 +1,6 @@
 $( document ).ready(function() {
     // An array of actions, new actions will be pushed into this array;
-    var actions = ["Dancing", "Jogging", "Falling", "Reading", "Pushing", "Swimming", "Eating", "Skipping", "Crying", "Winking","Beyoncing", "Strolling", "Hopping"];
+    var actions = ["Dancing", "Jogging", "Falling", "Farting", "Fighting", "Swimming", "Eating", "Skipping", "Laughing", "USMC","Playing", "Strolling", "Baseball"];
     // Creating Functions & Methods
     // Function that displays all gif buttons
     function displayGifButtons(){
@@ -40,7 +40,7 @@ $( document ).ready(function() {
     // Function that displays all of the gifs
     function displayGifs(){
         var action = $(this).attr("data-name");
-        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + action + "&api_key=dc6zaTOxFJmzC&limit=10";
+        var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + action + "&api_key=WgUWX8WbGimatZM6i9CEEMsXiRsLnBAk";
         console.log(queryURL); // displays the constructed url
         $.ajax({
             url: queryURL,
