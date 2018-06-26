@@ -1,16 +1,16 @@
 $( document ).ready(function() {
-    // An array of actions, new actions will be pushed into this array;
-    var actions = ["Dancing", "Jogging", "Falling", "Farting", "Fighting", "Swimming", "Eating", "Skipping", "Laughing", "USMC","Playing", "Strolling", "Baseball"];
+    // An array of topics, new topics will be pushed into this array;
+    var topics = ["Dancing", "Jogging", "Falling", "Farting", "Fighting", "Swimming", "Eating", "Skipping", "Laughing", "USMC","Playing", "Strolling", "Baseball"];
     // Creating Functions & Methods
     // Function that displays all gif buttons
     function displayGifButtons(){
         $("#gifButtonsView").empty(); // erasing anything in this div id so that it doesnt duplicate the results
-        for (var i = 0; i < actions.length; i++){
+        for (var i = 0; i < topics.length; i++){
             var gifButton = $("<button>");
             gifButton.addClass("action");
             gifButton.addClass("btn btn-primary")
-            gifButton.attr("data-name", actions[i]);
-            gifButton.text(actions[i]);
+            gifButton.attr("data-name", topics[i]);
+            gifButton.text(topics[i]);
             $("#gifButtonsView").append(gifButton);
         }
     }
@@ -21,7 +21,7 @@ $( document ).ready(function() {
         if (action == ""){
           return false; // added so user cannot add a blank button
         }
-        actions.push(action);
+        topics.push(action);
     
         displayGifButtons();
         return false;
@@ -32,7 +32,7 @@ $( document ).ready(function() {
         // rather than just the last
     function removeLastButton(){
         $("removeGif").on("click", function(){
-        actions.pop(action);
+        topics.pop(action);
         displayGifButtons();
         return false;
         });
@@ -75,7 +75,7 @@ $( document ).ready(function() {
         });
     }
     // Calling Functions & Methods
-    displayGifButtons(); // displays list of actions already created
+    displayGifButtons(); // displays list of topics already created
     addNewButton();
     removeLastButton();
     // Document Event Listeners
